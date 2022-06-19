@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import './App.css'
 
+import NavBar from './NavBar'
 import DogList from './DogList'
 import DogDetails from './DogDetails'
 import whiskey from './static/whiskey.jpg'
@@ -12,6 +13,7 @@ import tubby from './static/tubby.jpg'
 const App = () => {
   return (
     <BrowserRouter>
+      <NavBar />
       <Switch>
         <Route exact path="/dogs">
           <DogList dogs={App.defaultProps.dogs} />
