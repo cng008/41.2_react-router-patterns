@@ -16,7 +16,8 @@ const DogList = ({ dogs }) => {
 
   return (
     <div className="DogList">
-      <h1>ADOPT ME</h1>
+      <h1>WE HAVE DOGZ</h1>
+      <p>CLICK ON THEM FOR MORE INFO</p>
       <div className="DogList-Dogs">{pups}</div>
     </div>
   )

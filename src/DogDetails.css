@@ -13,7 +13,7 @@
   margin: 2em 8em;
 }
 
-h1,
+.DogDetails-Col > h1,
 h3 {
   margin-left: 40px;
   margin-top: 0;
