@@ -1,0 +1,36 @@
+.DogList {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.DogList-Dogs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.DogList-Dog {
+  text-align: center;
+  margin: 1em;
+}
+
+.DogList-Dog:hover {
+  transform: scale(1.3);
+  text-decoration: underline;
+  color: pink;
+}
+
+img {
+  width: 15vw;
+  border-radius: 5em;
+}
+
+a {
+  text-decoration: none;
+  color: salmon;
+}
+
+/* a:hover {
+  text-decoration: underline;
+  color: pink;
+} */
