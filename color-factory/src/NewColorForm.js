@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import './NewColorForm.css'
 
 /** form that will let user add a new color
  * redirect to the colors index with new color appearing at the top.
@@ -13,7 +14,7 @@ const NewColorForm = ({ addColor }) => {
 
   const handleChange = evt => {
     const { name, value } = evt.target
-    setColorInput({ [name]: value })
+    setColorInput({ [name]: value.toUpperCase() })
   }
 
   const handleSubmit = evt => {
@@ -29,19 +30,22 @@ const NewColorForm = ({ addColor }) => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="color">Select a Color</label>
+    <div className="NewColorForm-Container">
+      <h2>Select a Color</h2>
+      <form className="NewColorForm" onSubmit={handleSubmit}>
+        <label htmlFor="color"></label>
         <input
+          className="NewColorForm-Input"
           type="color"
           name="color"
+          defaultValue={INITIAL_VALUE}
           value={colorInput.color}
           onChange={handleChange}
         />
-        <button>Add!</button>
+        <button>add</button>
       </form>
       <Link to="/back">
-        <button>Back</button>
+        <button className="button-85">back</button>
       </Link>
     </div>
   )

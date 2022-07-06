@@ -1,5 +1,6 @@
 import React from 'react'
 import { Redirect, useParams, Link } from 'react-router-dom'
+import './Color.css'
 
 /** see a color in all its glory */
 
@@ -12,9 +13,13 @@ const Color = () => {
   }
 
   return (
-    <div style={{ backgroundColor: '#' + color }}>
-      {color}
-      <Link to="/back">Back</Link>
+    <div className="Color" style={{ backgroundColor: '#' + color }}>
+      <div className="Color-hex">
+        <p>#{color}</p>
+      </div>
+      <Link to="/back">
+        <button className="button-85">back</button>
+      </Link>
     </div>
   )
 }

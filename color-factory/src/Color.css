@@ -1,0 +1,11 @@
+.Color {
+  text-align: center;
+  height: 100vh;
+}
+
+.Color-hex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}

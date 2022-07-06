@@ -1,26 +1,30 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-// import NewColorForm from './NewColorForm'
+import './ColorsList.css'
 
 /** a list of all available colors */
 
 const ColorsList = ({ colors }) => {
   return (
-    <div>
-      <h1 className="ColorsList-h1">Color Factory</h1>
-      <Link to="/colors/new">Add a new color</Link>
+    <div className="ColorsList">
+      <h1>COLOR FACTORY</h1>
+      <Link to="/colors/new">
+        <button className="button-85">add a new color</button>
+      </Link>
       <div className="ColorsList-div">
         {colors.map(({ color, id }) => (
           <div key={id}>
-            <Link to={`/colors/${color}`}>{color}</Link>
-            {/* // <Color key={id} color={color} /> */}
+            <Link to={`/colors/${color}`}>
+              <button
+                className="ColorsList-Color"
+                style={{ backgroundColor: '#' + color }}
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </button>
+            </Link>
           </div>
         ))}
       </div>
-      <Link to="/back">
-        <button>Back</button>
-      </Link>
     </div>
   )
 }
