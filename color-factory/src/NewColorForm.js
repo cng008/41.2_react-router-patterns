@@ -18,15 +18,19 @@ const NewColorForm = ({ addColor }) => {
   }
 
   const handleSubmit = evt => {
-    evt.preventDefault()
-    const removeHex =
-      colorInput.color[0] === '#'
-        ? colorInput.color.substring(1)
-        : colorInput.color
+    try {
+      evt.preventDefault()
+      const removeHex =
+        colorInput.color[0] === '#'
+          ? colorInput.color.substring(1)
+          : colorInput.color
 
-    addColor(removeHex)
-    // setColor(INITIAL_VALUE)
-    history.push('/colors') //imperatively redirect to colors index
+      addColor(removeHex)
+      // setColor(INITIAL_VALUE)
+      history.push('/colors') //imperatively redirect to colors index
+    } catch (err) {
+      alert('You must select a new color first')
+    }
   }
 
   return (
