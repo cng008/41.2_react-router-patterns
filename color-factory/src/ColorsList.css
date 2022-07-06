@@ -20,6 +20,14 @@ h1 {
 
 .ColorsList-Color {
   margin: 0.5em;
+  border: none;
+  width: 40em;
+  height: 2em;
+}
+
+.ColorsList-Color:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .button-85 {

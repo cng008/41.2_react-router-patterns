@@ -18,9 +18,7 @@ const ColorsList = ({ colors }) => {
               <button
                 className="ColorsList-Color"
                 style={{ backgroundColor: '#' + color }}
-              >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </button>
+              ></button>
             </Link>
           </div>
         ))}

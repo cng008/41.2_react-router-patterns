@@ -23,6 +23,10 @@ const Routes = () => {
     {
       id: 4,
       color: 'BFCC94'
+    },
+    {
+      id: 5,
+      color: '5760E4'
     }
   ]
 
