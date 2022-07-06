@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 /** form that will let user add a new color
@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 const NewColorForm = ({ addColor }) => {
   const INITIAL_VALUE = '#5760E4'
   const [colorInput, setColorInput] = useState(INITIAL_VALUE)
+  const history = useHistory()
 
   const handleChange = evt => {
     const { name, value } = evt.target
@@ -24,7 +25,7 @@ const NewColorForm = ({ addColor }) => {
 
     addColor(removeHex)
     // setColor(INITIAL_VALUE)
-    return <Redirect to="/colors" />
+    history.push('/colors') //imperatively redirect to colors index
   }
 
   return (
@@ -39,7 +40,9 @@ const NewColorForm = ({ addColor }) => {
         />
         <button>Add!</button>
       </form>
-      <Link to="/back">Back</Link>
+      <Link to="/back">
+        <button>Back</button>
+      </Link>
     </div>
   )
 }
